@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>AI Resume Builder</title>
     <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles21.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts for typography -->
     <link href="https://i.pinimg.com/474x/29/91/f2/2991f20fd2fca5962cc8e62bac926bb1.jpg" rel="stylesheet">
 </head>
@@ -27,9 +27,9 @@
 
     <!-- Hero Section with New Image -->
     <section id="home" class="hero">
-        <img src=".jpeg" class="hero-image" alt="Resume Builder">
+        <img src="" class="hero-image" alt="Resume Builder">
         <div class="hero-content">
-            <h1>Welcome!!</h1>
+            <h1>Welcome, Phani Karthik</h1>
             <p>Your ultimate AI-powered resume builder</p>
             <button onclick="location.href='#next-steps'">Get Started</button>
         </div>
@@ -86,3 +86,72 @@
     </footer>
 </body>
 </html>
+<!-- Share Buttons -->
+<section class="share-buttons">
+    <h2 style="text-align: center;">Share This Website</h2>
+    <div class="share-buttons" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <button onclick="shareOnFacebook()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </button>
+        <button onclick="shareOnTwitter()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </button>
+        <button onclick="shareOnLinkedIn()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </button>
+        <button onclick="shareViaEmail()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+            <i class="fas fa-envelope"></i> Email
+        </button>
+        <button onclick="shareOnGitHub()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+            <i class="fab fa-github"></i> GitHub
+        </button>
+        <button onclick="copyLink()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+            <i class="fas fa-link"></i> Copy Link
+        </button>
+    </div>
+</section>
+
+<script>
+    // Function to share on Facebook
+    function shareOnFacebook() {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    }
+
+    // Function to share on Twitter
+    function shareOnTwitter() {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent("Check out this amazing AI Resume Builder!");
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+    }
+
+    // Function to share on LinkedIn
+    function shareOnLinkedIn() {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+    }
+
+    // Function to share via Email
+    function shareViaEmail() {
+        const url = encodeURIComponent(window.location.href);
+        const subject = encodeURIComponent("AI Resume Builder");
+        const body = encodeURIComponent("Check out this amazing AI Resume Builder: " + window.location.href);
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    }
+
+    // Function to share on GitHub
+    function shareOnGitHub() {
+        const url = encodeURIComponent(window.location.href);
+        const description = encodeURIComponent("Check out this amazing AI Resume Builder!");
+        const content = encodeURIComponent(`Check out this website: ${window.location.href}`);
+        window.open(`https://gist.github.com/?description=${description}&content=${content}`, '_blank');
+    }
+
+    // Function to copy the website link
+    function copyLink() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            alert("Link copied to clipboard!");
+        });
+    }
+</script>
