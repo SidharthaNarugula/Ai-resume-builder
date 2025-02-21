@@ -1,0 +1,287 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire hero section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place image behind content */
+}
+
+.hero-content {
+    text-align: center;
+    padding: 0 20px;
+    background-color: rgba(37, 29, 29, 0.309); /* Overlay for readability */
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #FFD700; /* Gold button */
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #e6c200;
+}
+
+/* Main Content Styles */
+.content {
+    padding: 140px 20px 60px; /* Add top padding to compensate for fixed header */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    color: #FFD700; /* Gold headings */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+section button {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+section button:hover {
+    background-color: #e6c200;
+}
+
+/* Options in Job Search Section */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.option {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 40px);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.option h3 {
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.documents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.document {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 40px);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.document img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.document h3 {
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.resume-review {
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        margin-left: 15px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+    .content {
+        padding: 120px 20px 40px;
+    }
+    .options, .documents {
+        flex-direction: column;
+    }
+    .option, .document {
+        flex: 1 1 100%;
+    }
+}
+/*_____________________________________________________________________________________________________________________________________________
+/* Styling for the build-resume-section */
+.build-resume-section {
+    padding: 60px 210px;
+    text-align: center;
+}
+
+.build-resume-section h1 {
+    font-size: 2.5em;
+    color: #3ede90; /* You can adjust the color to match your theme */
+    margin-bottom: 40px;
+}
+
+.resume-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.option-block {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 50px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.option-block h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.option-block p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.option-block button {
+    background-color: #facd18; /* Adjust to match your theme */
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.option-block button:hover {
+    background-color: #ffe100;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .resume-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option-block {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
