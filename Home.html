@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Builder</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for typography -->
+    <link href="https://i.pinimg.com/474x/29/91/f2/2991f20fd2fca5962cc8e62bac926bb1.jpg" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="Screenshot 2025-02-21 at 12.53.19 PM.png" alt="AI Resume Builder Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#next-steps">Next Steps</a></li>
+                <li><a href="#job-search">Job Search</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#resume-review">Resume Review</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with New Image -->
+    <section id="home" class="hero">
+        <img src="" class="hero-image" alt="Resume Builder">
+        <div class="hero-content">
+            <h1 id="welcome-message">Welcome, Phani Karthik</h1>
+            <p>Your ultimate AI-powered resume builder</p>
+            <button onclick="location.href='#next-steps'">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="next-steps">
+            <h2>Next Steps</h2>
+            <p>Prepare for your next interview with well-practiced and thoughtful responses.</p>
+            <button onclick="location.href='build-resume.html'">Build My Resume</button>
+        </section>
+        <section id="job-search">
+            <h2>Take Your Job Search to the Next Level</h2>
+            <div class="options">
+                <div class="option">
+                    <h3>Cover Letter</h3>
+                    <p>Create a cover letter that stands out from the crowd!</p>
+                    <button onclick="location.href='cover-letter.html'">Learn More</button>
+                </div>
+                <div class="option">
+                    <h3>Interview Answer Builder</h3>
+                    <p>Prepare with well-practiced and thoughtful interview responses.</p>
+                    <button onclick="location.href='interview-builder.html'">Build My Answers</button>
+                </div>
+            </div>
+        </section>
+        <section id="documents">
+            <h2>Your Documents</h2>
+            <div class="documents">
+                <div class="document">
+                    <img src="Screenshot 2025-02-21 at 1.07.27 PM.png" alt="Resume Icon">
+                    <h3>Most Recent Resume</h3>
+                    <button onclick="location.href='edit-resume.html'">Edit</button>
+                    <button onclick="location.href='download-resume.html'">Download</button>
+                </div>
+                <div class="document">
+                    <img src="Screenshot 2025-02-21 at 1.08.05 PM.png" alt="Cover Letter Icon">
+                    <h3>Cover Letter</h3>
+                    <button onclick="location.href='cover-letter.html'">Build Now</button>
+                </div>
+            </div>
+        </section>
+        <section id="resume-review">
+            <h2>Stand Out with a Resume Review</h2>
+            <p>Get a free review by a professional and make your resume shine!</p>
+            <button onclick="location.href='resume-review.html'">Get a Resume Review</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Resume Builder. All rights reserved.</p>
+    </footer>
+
+    <!-- Share Buttons -->
+    <section class="share-buttons">
+        <h2 style="text-align: center;">Share This Website</h2>
+        <div class="share-buttons" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <button onclick="shareOnFacebook()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-facebook"></i> Facebook
+            </button>
+            <button onclick="shareOnTwitter()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-twitter"></i> Twitter
+            </button>
+            <button onclick="shareOnLinkedIn()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </button>
+            <button onclick="shareViaEmail()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fas fa-envelope"></i> Email
+            </button>
+            <button onclick="shareOnGitHub()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-github"></i> GitHub
+            </button>
+            <button onclick="copyLink()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fas fa-link"></i> Copy Link
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Function to share on Facebook
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        // Function to share on Twitter
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Check out this amazing AI Resume Builder!");
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        // Function to share on LinkedIn
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        // Function to share via Email
+        function shareViaEmail() {
+            const url = encodeURIComponent(window.location.href);
+            const subject = encodeURIComponent("AI Resume Builder");
+            const body = encodeURIComponent("Check out this amazing AI Resume Builder: " + window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        // Function to share on GitHub
+        function shareOnGitHub() {
+            const url = encodeURIComponent(window.location.href);
+            const description = encodeURIComponent("Check out this amazing AI Resume Builder!");
+            const content = encodeURIComponent(`Check out this website: ${window.location.href}`);
+            window.open(`https://gist.github.com/?description=${description}&content=${content}`, '_blank');
+        }
+
+        // Function to copy the website link
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link copied to clipboard!");
+            });
+        }
+
+        // Update welcome message with username from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcome-message').textContent = `Welcome, ${username}`;
+            }
+        });
+    </script>
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Builder</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for typography -->
+    <link href="https://i.pinimg.com/474x/29/91/f2/2991f20fd2fca5962cc8e62bac926bb1.jpg" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="Screenshot 2025-02-21 at 12.53.19 PM.png" alt="AI Resume Builder Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#next-steps">Next Steps</a></li>
+                <li><a href="#job-search">Job Search</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#resume-review">Resume Review</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with New Image -->
+    <section id="home" class="hero">
+        <img src="" class="hero-image" alt="Resume Builder">
+        <div class="hero-content">
+            <h1 id="welcome-message">Welcome, Phani Karthik</h1>
+            <p>Your ultimate AI-powered resume builder</p>
+            <button onclick="location.href='#next-steps'">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="next-steps">
+            <h2>Next Steps</h2>
+            <p>Prepare for your next interview with well-practiced and thoughtful responses.</p>
+            <button onclick="location.href='build-resume.html'">Build My Resume</button>
+        </section>
+        <section id="job-search">
+            <h2>Take Your Job Search to the Next Level</h2>
+            <div class="options">
+                <div class="option">
+                    <h3>Cover Letter</h3>
+                    <p>Create a cover letter that stands out from the crowd!</p>
+                    <button onclick="location.href='cover-letter.html'">Learn More</button>
+                </div>
+                <div class="option">
+                    <h3>Interview Answer Builder</h3>
+                    <p>Prepare with well-practiced and thoughtful interview responses.</p>
+                    <button onclick="location.href='interview-builder.html'">Build My Answers</button>
+                </div>
+            </div>
+        </section>
+        <section id="documents">
+            <h2>Your Documents</h2>
+            <div class="documents">
+                <div class="document">
+                    <img src="Screenshot 2025-02-21 at 1.07.27 PM.png" alt="Resume Icon">
+                    <h3>Most Recent Resume</h3>
+                    <button onclick="location.href='edit-resume.html'">Edit</button>
+                    <button onclick="location.href='download-resume.html'">Download</button>
+                </div>
+                <div class="document">
+                    <img src="Screenshot 2025-02-21 at 1.08.05 PM.png" alt="Cover Letter Icon">
+                    <h3>Cover Letter</h3>
+                    <button onclick="location.href='cover-letter.html'">Build Now</button>
+                </div>
+            </div>
+        </section>
+        <section id="resume-review">
+            <h2>Stand Out with a Resume Review</h2>
+            <p>Get a free review by a professional and make your resume shine!</p>
+            <button onclick="location.href='resume-review.html'">Get a Resume Review</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Resume Builder. All rights reserved.</p>
+    </footer>
+
+    <!-- Share Buttons -->
+    <section class="share-buttons">
+        <h2 style="text-align: center;">Share This Website</h2>
+        <div class="share-buttons" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <button onclick="shareOnFacebook()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-facebook"></i> Facebook
+            </button>
+            <button onclick="shareOnTwitter()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-twitter"></i> Twitter
+            </button>
+            <button onclick="shareOnLinkedIn()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </button>
+            <button onclick="shareViaEmail()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fas fa-envelope"></i> Email
+            </button>
+            <button onclick="shareOnGitHub()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-github"></i> GitHub
+            </button>
+            <button onclick="copyLink()" style="padding: 10px 20px; font-size: 1rem; background-color: #ffd700; color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fas fa-link"></i> Copy Link
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Function to share on Facebook
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        // Function to share on Twitter
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Check out this amazing AI Resume Builder!");
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        // Function to share on LinkedIn
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        // Function to share via Email
+        function shareViaEmail() {
+            const url = encodeURIComponent(window.location.href);
+            const subject = encodeURIComponent("AI Resume Builder");
+            const body = encodeURIComponent("Check out this amazing AI Resume Builder: " + window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        // Function to share on GitHub
+        function shareOnGitHub() {
+            const url = encodeURIComponent(window.location.href);
+            const description = encodeURIComponent("Check out this amazing AI Resume Builder!");
+            const content = encodeURIComponent(`Check out this website: ${window.location.href}`);
+            window.open(`https://gist.github.com/?description=${description}&content=${content}`, '_blank');
+        }
+
+        // Function to copy the website link
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link copied to clipboard!");
+            });
+        }
+
+        // Prompt for username and update welcome message
+        document.addEventListener('DOMContentLoaded', () => {
+            let username = localStorage.getItem('username');
+            if (!username) {
+                username = prompt("Please enter your name:");
+                if (username) {
+                    localStorage.setItem('username', username);
+                }
+            }
+            if (username) {
+                document.getElementById('welcome-message').textContent = `Welcome, ${username}`;
+            }
+        });
+    </script>
+</body>
+</html>
+</html>

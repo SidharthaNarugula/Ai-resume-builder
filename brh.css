@@ -1,0 +1,70 @@
+/* Styling for the build-resume-section */
+.build-resume-section {
+    padding: 60px 210px;
+    text-align: center;
+}
+
+.build-resume-section h1 {
+    font-size: 2.5em;
+    color: #ff0000; /* You can adjust the color to match your theme */
+    margin-bottom: 40px;
+}
+
+.resume-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.option-block {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.option-block h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.option-block p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.option-block button {
+    background-color: #ff0000; /* Adjust to match your theme */
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.option-block button:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .resume-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
